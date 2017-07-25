@@ -43,6 +43,10 @@ module.exports = function(controller) {
 
     });
 
+	controller.hears(['^where are you?'], 'direct_message,direct_mention', function(bot, message) {
+       bot.reply(message,'Riding the tidal wave on a rusty ship of fools!');
+    });
+	
 	controller.hears(['^what is my pto?'], 'direct_message,direct_mention', function(bot, message) {
        bot.reply(message,'How the heck am I suppossed to know?? I am not even connected to the TeamHealth network!');
     });
