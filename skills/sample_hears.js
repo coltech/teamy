@@ -43,6 +43,10 @@ module.exports = function(controller) {
 
     });
 
+	controller.hears(['^what is my pto'], 'direct_message,direct_mention', function(bot, message) {
+       bot.reply(message,'How the heck am I suppossed to know?? I am not even connected to the TeamHealth network!');
+    });
+	
     controller.hears(['^say (.*)','^say'], 'direct_message,direct_mention', function(bot, message) {
         if (message.match[1]) {
 
