@@ -72,6 +72,7 @@ require("fs").readdirSync(normalizedPath).forEach(function(file) {
 // controller.studio.before, controller.studio.after and controller.studio.validate
 if (process.env.studio_token) {
     controller.on('direct_message,direct_mention', function(bot, message) {
+		bot.reply(message, 'I am a bot');
         if (message.text) {
             controller.studio.runTrigger(bot, message.text, message.user, message.channel).then(function(convo) {
                 if (!convo) {
