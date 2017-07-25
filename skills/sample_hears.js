@@ -42,6 +42,10 @@ module.exports = function(controller) {
         });
 
     });
+	
+	controller.hears(['/Billy/','/billy/'], 'direct_message,direct_mention', function(bot, message) {
+       bot.reply(message,'Hey watch yourself chief, you are referring to the parmus maximus!');
+    });
 
 	controller.hears(['^where are you?'], 'direct_message,direct_mention', function(bot, message) {
        bot.reply(message,'Riding the tidal wave on a rusty ship of fools!');
